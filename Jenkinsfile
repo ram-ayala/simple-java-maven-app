@@ -27,5 +27,11 @@ pipeline {
                 sh './jenkins/scripts/deliver.sh' 
             }
         }
+		stage('Cat Directories') { 
+            steps {
+                sh 'ls -lrt /jenkins_home/jenkins/workspace/Ram-Test2/target/test-classes ' 
+				sh 'ls -lrt /jenkins_home/jenkins/workspace/Ram-Test2/target/ '
+            }
+        }
     }
 }
